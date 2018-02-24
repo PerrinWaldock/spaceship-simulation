@@ -1,0 +1,96 @@
+Intro:
+This program loosely simulates the behaviour of a rocket in outer space. It simulates the effects of gravity, elastic and inelastic collisions, and uses momentum to calculate the force of the thruster on the rocket. It does not take rotational momentum into account at this point (elastic collisions with rotational momentum can be complicated to solve), but does allow the user to rotate the rocket.
+
+Instructions:
+
+To run the program, navigate to the directory with spaceshipSimulation.py, things.py, collisions.py, and constants.py. Type the command "python spaceshipSimulation.py" into the terminal
+
+A window should pop up with a mostly black screen on the left, and a control panel with many buttons, sliders, etc on the right. This control panel will control the rocket.
+
+Controls:
+Statistics:
+The top left of the panel show useful information about the rocket:
+
+Orientation a normalized vector showing which direction the rocket is facing. All vectors are displayed as <x y z>.
+
+Position is a vector containing the rocket's position.
+
+Velocity is a vector containing the rocket's velocity.
+
+Speed is a vector containing the rocket's speed (which is often easier to read than the velocity).
+
+Fuel Remaining shows how much fuel the rocket has left to burn. When the rocket runs out of fuel, the thrusters will no longer fire.
+
+Ammo Remaining shows the number of projectiles that the craft can fire. This limits the number of bodies that the program must simulate.
+
+Time Passed shows the amount of virtual time that has passed in the d:h:m:s format.
+
+Time Scale shows the number of virtual seconds that should pass to ever real second.
+
+Mass shows the total mass of the craft, fuel included.
+
+Distance from origin shows the distance of the craft from the starting position of the non cloud-covered planet
+
+
+Simulation Controls:
+Clicking "run" will cause the simulation to to run; clicking "pause" will cause it to pause. This can also be toggled by using "p" on your keyboard.
+
+Clicking "Show Trails" will show the trajectories of all of the objects in the system; "Hide Trails" will hide these trajectories.
+
+Time Step Size changes the number of seconds between simulation steps
+
+FPS changes the frame rate of the simulation
+
+Reset Simulation clears all projectiles and returns the planets and craft to their starting position
+
+
+Camera Controls:
+Zoom Level changes where the "camera" appears to be positioned away from the craft
+
+Vertical Camera Angle changes what vertical angle the camera looks at the craft at; 0 means that it looks on the same horizontal plane as the craft.
+
+Horizontal Camera Angle changes what horizontal angle the camera looks at the craft at; 0 means that it looks on the same vertical plane as the craft.
+
+
+Craft Controls:
+Turn Up rotates the craft upwards. The same effect can be achieved (with a more fine resolution) by pressing and/or holding the up arrow key or 'w' key on your keyboard.
+
+Turn Down rotates the craft downwards. The same effect can be achieved (with a more fine resolution) by pressing and/or holding the down arrow key or 's' key on your keyboard.
+
+Turn Left rotates the craft left. The same effect can be achieved (with a more fine resolution) by pressing and/or holding the left arrow key or 'a' key on your keyboard.
+
+Turn Right rotates the craft right. The same effect can be achieved (with a more fine resolution) by pressing and/or holding the left arrow key or 'd' key on your keyboard.
+
+Fuel Burn Rate adjusts how quickly the craft burns through its fuel. A higher burn rate goes through fuel more quickly, but also provides greater force.
+
+Refuel magically adds more fuel to the fuel tank of the craft; this both increases the mass of the rocket and allows it to fly for longer.
+
+Recentre magically resets the craft to its starting position.
+
+Craft Colour allows you to change the craft colour; it can be useful for tracking where the craft was at certain points of time when looking at its trail.
+
+Mass of Craft When Empty adjusts the empty mass of the ship.
+
+Exhaust Velocity adjusts the exhaust speed of the ship. These values are larger than real-life ships to allow for faster movement; to be realistic, try 2.4 or 4 km/s
+
+
+Projectile Controls:
+Fire fires a projectile from the craft. This can also be achieved by pressing "f" on your keyboard.
+
+Reload increases the craft's ammunition. Be wary of doing this as it may cause the simulation to need to track too many things at once.
+
+Clear should remove all projectiles from the simulation. This is good to do if your simulation slows down after firing a lot of projectiles.
+
+Projectile Colour allows you to change the colour of the projectile; it can be useful for tracking different projectiles.
+
+Projectile Radius allows you to change the radius of the projectile; this affects how it behaves in elastic collisions.
+
+Projectile Mass allows you to change the mass of the projectile; this affects the craft when firing the projectile as well as the the result of any collisions.
+
+Projectile Launch Spped allows you to change the initial speed of the projectile relative to the craft; this affects the craft when firing the projectile as well as the the result of any collisions.
+
+Projectile Collision Type changes the type of collisions that the particle can undergo (elastic or inelastic).
+
+
+Glitches:
+Occasionally, objects will randomly disappear or the camera angle will tilt at strange angles. This often occurs when the simulation is rendering too many objects at once. First, try hitting the "clear" button to remove all projectiles. If that doesn't work, try resetting the simulation. If that doesn't work, restart the program.

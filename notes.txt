@@ -1,0 +1,21 @@
+Plan:
+-objects
+	-spaceship
+	-planets/sun
+	-asteroids
+	-all interact gravitationally on eachother
+
+-controls
+	-initial
+		-change masses of various planets
+	-ongoing
+		-0 to 9 to adjust escape thrust
+		-arrow keys to control rotation (no energy)
+
+-animation
+	-show trail, length/color depending on how powerfully rocket is thrusting?
+
+-extras
+	-? fire projectiles at asteriods (with full momentum); inelastic collision (space bar)
+	-? each object has "health" which is reduced by kinetic energy of two objects hitting eachother. Randomly split target in half; maintain momentum
+
